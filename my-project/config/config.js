@@ -82,12 +82,12 @@ export default {
       : {}),
   },
   proxy: {
-    '/api': {
-        target: 'http://127.0.0.1:8764/api/',
-        changeOrigin: true,
-        pathRewrite: { '^/api': '' },
+    '/spring-api': {
+      target: 'http://127.0.0.1:8764/spring-api/',
+      changeOrigin: true,
+      pathRewrite: { '^/spring-api': '' },
     },
-},
+  },
   ignoreMomentLocale: true,
   lessLoaderOptions: {
     javascriptEnabled: true,

@@ -133,7 +133,8 @@ export default [
                 component: './List/Applications',
               },
             ],
-          }, {
+          },
+          {
             path: '/list/sysUser',
             name: 'sysUser',
             component: './List/SysUser',
@@ -292,15 +293,16 @@ export default [
       //     }
       //   ],
       // },
+      // list
       {
         path: '/system',
-        name: 'system',
         icon: 'setting',
+        name: 'system',
         routes: [
           {
-            path: '/system/sysUser',
+            path: '/sysUser/sysUser',
             name: 'sysUser',
-            component: './aMy/System/SysUser/index',
+            component: './System/SysUser',
           },
         ],
       },
