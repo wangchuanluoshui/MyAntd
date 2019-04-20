@@ -20,7 +20,7 @@ export default {
   'menu.list.searchlist.projects': '搜索列表（项目）',
   'menu.list.searchlist.applications': '搜索列表（应用）',
   'menu.list.sysUser': '用户管理',
-
+  'menu.list.sysWork': '工作统计',
   'menu.profile': '详情页',
   'menu.profile.basic': '基础详情页',
   'menu.profile.advanced': '高级详情页',
@@ -37,9 +37,9 @@ export default {
   'menu.account.settings': '个人设置',
   'menu.account.trigger': '触发报错',
   'menu.account.logout': '退出登录',
-  'menu.system':'系统管理',
-  'menu.system.sysUser':'用户管理',
-  'menu.system.sysRole':'角色管理',
-  'menu.system.sysFunction':'菜单管理',
-  'menu.system.sysOrganization':'机构管理',
+  'menu.system': '系统管理',
+  'menu.system.sysUser': '用户管理',
+  'menu.system.sysRole': '角色管理',
+  'menu.system.sysFunction': '菜单管理',
+  'menu.system.sysOrganization': '机构管理',
 };

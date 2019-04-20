@@ -139,6 +139,11 @@ export default [
             name: 'sysUser',
             component: './List/SysUser',
           },
+          {
+            path: '/list/sysWork',
+            name: 'sysWork',
+            component: './List/sysWork',
+          },
         ],
       },
       {

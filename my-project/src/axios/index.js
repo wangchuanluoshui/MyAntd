@@ -18,7 +18,6 @@ const baseUri = '/spring-api/';
 
 export default class index {
   static getRequest(options) {
-    console.log(options.data.params);
     return new Promise((resolve, reject) => {
       axios({
         url: baseUri + options.url,
@@ -29,6 +28,7 @@ export default class index {
         if (response.status == '200') {
           let res = response.data;
           if (res.code == '0000') {
+            console.log(res);
             resolve(res);
           } else {
             console.log(res);

@@ -316,48 +316,46 @@ class SysUser extends React.Component {
     return (
       <PageHeaderWrapper title="用户管理">
         <Card bordered={false}>
-          <div className={styles.tableList}>
-            <div className={styles.tableListForm}>
-              <Form onSubmit={this.handleSearch} layout="inline">
-                <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
-                  <Col md={8} sm={24}>
-                    <FormItem label="用户名">
-                      {getFieldDecorator('userName')(
-                        <Input placeholder="请输入" style={{ width: 200 }} />
-                      )}
-                    </FormItem>
-                  </Col>
-                  <Col md={8} sm={24}>
-                    <FormItem label="所属机构" style={{ float: 'right' }}>
-                      {getFieldDecorator('orgName')(
-                        <TreeSelect
-                          showSearch
-                          style={{ width: 200 }}
-                          value={this.state.treeValue}
-                          dropdownStyle={{ maxHeight: 500, overflow: 'auto' }}
-                          placeholder="请选择"
-                          allowClear
-                          treeDefaultExpandAll
-                          onChange={this.onChange}
-                        >
-                          <TreeNode value="parent 1" title="parent 1" key="0-1">
-                            <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
-                              <TreeNode value="leaf1" title="my leaf" key="random" />
-                              <TreeNode value="leaf2" title="your leaf" key="random1" />
-                            </TreeNode>
-                            <TreeNode value="parent 1-1" title="parent 1-1" key="random2">
-                              <TreeNode
-                                value="sss"
-                                title={<b style={{ color: '#08c' }}>sss</b>}
-                                key="random3"
-                              />
-                            </TreeNode>
-                          </TreeNode>
-                        </TreeSelect>
-                      )}
-                    </FormItem>
-                  </Col>
-                  {/* <Col md={6} sm={24}>
+          <Form onSubmit={this.handleSearch} layout="inline">
+            <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
+              <Col md={8} sm={24}>
+                <FormItem label="用户名">
+                  {getFieldDecorator('userName')(
+                    <Input placeholder="请输入" style={{ width: 200 }} />
+                  )}
+                </FormItem>
+              </Col>
+              <Col md={8} sm={24}>
+                <FormItem label="所属机构" style={{ float: 'right' }}>
+                  {getFieldDecorator('orgName')(
+                    <TreeSelect
+                      showSearch
+                      style={{ width: 200 }}
+                      value={this.state.treeValue}
+                      dropdownStyle={{ maxHeight: 500, overflow: 'auto' }}
+                      placeholder="请选择"
+                      allowClear
+                      treeDefaultExpandAll
+                      onChange={this.onChange}
+                    >
+                      <TreeNode value="parent 1" title="parent 1" key="0-1">
+                        <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
+                          <TreeNode value="leaf1" title="my leaf" key="random" />
+                          <TreeNode value="leaf2" title="your leaf" key="random1" />
+                        </TreeNode>
+                        <TreeNode value="parent 1-1" title="parent 1-1" key="random2">
+                          <TreeNode
+                            value="sss"
+                            title={<b style={{ color: '#08c' }}>sss</b>}
+                            key="random3"
+                          />
+                        </TreeNode>
+                      </TreeNode>
+                    </TreeSelect>
+                  )}
+                </FormItem>
+              </Col>
+              {/* <Col md={6} sm={24}>
                                         <FormItem label="电话" style={{ float:'right'}}>
                                             {getFieldDecorator('phone')(<Input placeholder="请输入" />)}
                                         </FormItem>
@@ -372,28 +370,26 @@ class SysUser extends React.Component {
                                             )}
                                         </FormItem>
                                     </Col> */}
-                  <Col md={8} sm={24}>
-                    <Button type="primary" ghost icon="plus" onClick={this.handleSave}>
-                      新增用户
-                    </Button>
-                    <Button
-                      style={{ float: 'right', marginRight: 18, marginLeft: 8 }}
-                      onClick={this.handleFormReset}
-                    >
-                      重置
-                    </Button>
-                    <Button
-                      style={{ float: 'right', marginRight: 8 }}
-                      type="primary"
-                      onClick={this.handleSearch}
-                    >
-                      查询
-                    </Button>
-                  </Col>
-                </Row>
-              </Form>
-            </div>
-          </div>
+              <Col md={8} sm={24}>
+                <Button type="primary" ghost icon="plus" onClick={this.handleSave}>
+                  新增用户
+                </Button>
+                <Button
+                  style={{ float: 'right', marginRight: 18, marginLeft: 8 }}
+                  onClick={this.handleFormReset}
+                >
+                  重置
+                </Button>
+                <Button
+                  style={{ float: 'right', marginRight: 8 }}
+                  type="primary"
+                  onClick={this.handleSearch}
+                >
+                  查询
+                </Button>
+              </Col>
+            </Row>
+          </Form>
         </Card>
         <Table
           columns={columns}
